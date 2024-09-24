@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pelletlab-ccs50"
+version = "0.1.0"
+description = ""
+authors = ["Kazem Kamali <itskazemk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0.35"
+persiantools = "^4.2.0"
+pyodbc = "^5.1.0"
+pymssql = "^2.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
