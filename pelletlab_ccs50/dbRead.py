@@ -61,10 +61,11 @@ with Session(bind=engine) as session:
                 if _requestValue.Value < 50:
                     ccs_50.append(_requestValue)
 
+        ccs_sum = sum(item.Value for item in ccs_inputs)
         ccs_50_percent = (len(ccs_50) / len(ccs_inputs)) * 100
 
-        if len(ccs_50) > 0:
-            print(round(ccs_50_percent, 1))
+        if ccs_sum == 0:
+            continue
 
         _areaAnalyzeId = ""
         if request.SubAreaID == uuid.UUID(
